@@ -30,7 +30,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://frontend-nu-lake-qjwev0yboh.vercel.app/"
+      "https://frontend-nu-lake-qjwev0yboh.vercel.app"
     ],
     credentials: true
   })
