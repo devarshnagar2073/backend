@@ -17,7 +17,8 @@ export const createEvent = async (req, res) => {
 
     let imageUrl = '';
     if (req.file) {
-      imageUrl = `http://localhost:5000/uploads/${req.file.filename}`;
+      const baseUrl = `${req.protocol}://${req.get('host')}`;
+      imageUrl = `${baseUrl}/uploads/${req.file.filename}`;
     }
 
     if (!title || !date || !location || !ticketPrice) {

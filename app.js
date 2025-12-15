@@ -28,19 +28,14 @@ app.use(cookieParser());
 // allow localhost + vercel domains
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin) return callback(null, true);
-      if (
-        origin.includes('localhost') ||
-        origin.includes('vercel.app')
-      ) {
-        return callback(null, true);
-      }
-      return callback(null, false);
-    },
+    origin: [
+      "http://localhost:5173",
+      "https://frontend-nu-lake-qjwev0yboh.vercel.app/"
+    ],
     credentials: true
   })
 );
+
 
 /* ---------------- STATIC (optional) ---------------- */
 
