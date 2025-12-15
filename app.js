@@ -19,7 +19,7 @@ const __dirname = dirname(__filename);
 var app = express();
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 const allowedOrigins = ['http://localhost:5173'];
 
